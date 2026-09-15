@@ -1,0 +1,81 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+#include "afxres.h"
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#pragma code_page(65001)
+
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+IDI_PERFMON             ICON                    "res\\PerfMon.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SETTINGS_DIALOG DIALOGEX 0, 0, 240, 178
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "性能面板设置"
+FONT 9, "Microsoft YaHei UI", 400, 0, 0x1
+BEGIN
+    LTEXT           "字体",IDC_STATIC_FONT,7,15,30,10
+    COMBOBOX        IDC_COMBO_FONT,42,13,133,90,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "字号",IDC_STATIC_SIZE,7,42,30,10
+    COMBOBOX        IDC_COMBO_SIZE,42,40,60,90,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "字体颜色",IDC_STATIC_COLOR,7,69,40,10
+    LTEXT           "",IDC_STATIC_SWATCH,50,67,28,14,SS_LEFT | WS_BORDER
+    PUSHBUTTON      "选择...",IDC_BTN_COLOR,84,66,50,16
+    LTEXT           "窗口透明度",IDC_STATIC_ALPHA,7,96,45,10
+    CONTROL         "",IDC_SLIDER_ALPHA,"msctls_trackbar32",TBS_AUTOTICKS | TBS_HORZ | WS_TABSTOP,55,93,105,16
+    LTEXT           "190",IDC_STATIC_ALPHAVAL,166,96,28,10
+    LTEXT           "提示：打开本窗口时，可直接用鼠标拖动性能面板调整位置",IDC_STATIC_HINT,7,120,228,20
+    PUSHBUTTON      "应用(&A)",IDC_BTN_APPLY,55,145,50,16
+    PUSHBUTTON      "隐藏到托盘(&H)",IDC_BTN_HIDE,112,145,68,16
+    PUSHBUTTON      "退出(&X)",IDC_BTN_EXIT,186,145,48,16
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "FileDescription", "PerfMon"
+            VALUE "FileVersion", "1.0.0.0"
+            VALUE "InternalName", "PerfMon.exe"
+            VALUE "OriginalFilename", "PerfMon.exe"
+            VALUE "ProductName", "PerfMon"
+            VALUE "ProductVersion", "1.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
